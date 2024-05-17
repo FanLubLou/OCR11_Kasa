@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className='home'>
         <Header />      
-        <Banner />      
+        {/* <Banner />      
         <Galery />      
-        <Footer />      
+        <Footer />       */}
     </div>
   )
 }
