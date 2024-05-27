@@ -1,7 +1,31 @@
 import './Collapse.scss'
+import arrow from '../../assets/Vector.svg';
+import { useState } from 'react';
 
-export default function Collapse() {
-  return (
-    <div>Collapse</div>
-  )
+export default function Collapse({title, content}) {
+
+    const [toggle, setToggle] = useState(false);
+
+    return (
+        <>
+            <div className="collapse" >
+                <h3 className='collapse_title' onClick={() => setToggle(!toggle)} >
+                    {title}
+                    <img 
+                        className={toggle ? 'arrow arrow_up' : 'arrow arrow_down'} 
+                        src={arrow} 
+                        alt="Flêche indiquant si la fenêtre est ouverte ou fermée" 
+                    />
+                </h3>
+                <div className={toggle ? 'collapse_content' : 'collapse_content_hidden'}>
+                    {Array.isArray(content) ? content.map((item, index) => {
+                        return (
+                            <p key={index}>{item}</p>
+                        )
+                    }) : content
+                    }
+                </div> 
+            </div>
+        </>
+    )
 }

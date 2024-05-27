@@ -1,6 +1,7 @@
 import './About.scss'
 import Header from '../../components/Header/Header'
 import Banner from '../../components/Banner/Banner'
+import Collapse from '../../components/Collapse/Collapse'
 import Footer from '../../components/Footer/Footer'
 import AboutImage from '../../assets/banner_about.png'
 
@@ -33,6 +34,15 @@ export default function About() {
       <div className="about">
           <Header />
           <Banner image={AboutImage} />
+          <main>
+				    {aboutDatas.map(data => {
+            return (
+              <section key={data.id}>
+                <Collapse title={data.title} content={data.content} />
+              </section>
+					)}
+				)}
+			</main>
           <Footer />      
     </div>
   )
