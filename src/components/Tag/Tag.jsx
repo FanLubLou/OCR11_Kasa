@@ -1,7 +1,8 @@
-import './Tag.scss'
+export default function Tag({tag}) {
 
-export default function Tag() {
   return (
-    <div>Tag</div>
+    <button>
+        {tag}
+    </button>
   )
 }

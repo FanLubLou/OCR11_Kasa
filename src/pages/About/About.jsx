@@ -33,16 +33,16 @@ export default function About() {
   return (
       <div className="about">
           <Header />
-          <Banner image={AboutImage} />
+          <Banner image={AboutImage} />        
           <main>
-				    {aboutDatas.map(data => {
-            return (
-              <section key={data.id}>
-                <Collapse title={data.title} content={data.content} />
-              </section>
-					)}
-				)}
-			</main>
+                {aboutDatas.map(data => {
+                return (
+                  <section key={data.id}>                    
+                    <Collapse title={data.title} content={data.content} />
+                  </section>
+              )}
+            )}
+          </main>
           <Footer />      
     </div>
   )
