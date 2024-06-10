@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Slider from "../../components/Carousel/Carousel"
 import Footer from "../../components/Footer/Footer";
 import Collapse from '../../components/Collapse/Collapse';
-import NotFound from '../Error/Error';
+import Error from '../Error/Error';
 import Tag from '../../components/Tag/Tag';
 import Rating from '../../components/Rating/Rating';
 
@@ -24,7 +24,7 @@ export default function Accommodation() {
 	}, [id, dataCurrentAccomodation]);
 
 	if (!dataCurrentAccomodation) {
-		return <NotFound />;
+		return <Error />;
 	}
 
 	const name = dataCurrentAccomodation.host.name.split(' ');

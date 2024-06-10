@@ -11,7 +11,11 @@
 
 .accomodation{
     flex-grow: 1;
-    &_content{
+    margin: 0 auto;
+    @media screen and (max-width: 650px){
+        margin: 0 10px;
+    }   
+        &_content{
         @include flex(row, space-between, flex-start);
         color: $color-secondary-red;
         width: 100%;
