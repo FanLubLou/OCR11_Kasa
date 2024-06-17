@@ -2,9 +2,7 @@ import './Accomodation.scss'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import datas from '../../data/data'
-import Header from "../../components/Header/Header";
 import Slider from "../../components/Carousel/Carousel"
-import Footer from "../../components/Footer/Footer";
 import Collapse from '../../components/Collapse/Collapse';
 import Error from '../Error/Error';
 import Tag from '../../components/Tag/Tag';
@@ -34,7 +32,6 @@ export default function Accommodation() {
 
 	return (
 		<div className='accomodation_wrapper'>
-			<Header />
 			<Slider imageSlider={imageSlider} />
 			<main className="accomodation">
 				<div className="accomodation_content">
@@ -42,9 +39,7 @@ export default function Accommodation() {
 						<h1>{dataCurrentAccomodation.title}</h1>
 						<p>{dataCurrentAccomodation.location}</p>
 						<div>
-							{dataCurrentAccomodation.tags.map((tag, index) => 
-								<Tag key={index} tag={tag}/>
-							)}
+							<Tag tags={dataCurrentAccomodation.tags} />
 						</div>
 					</div>
 					<div className="accomodation_content_host">
@@ -70,7 +65,6 @@ export default function Accommodation() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }
