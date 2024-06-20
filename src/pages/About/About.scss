@@ -1,6 +1,6 @@
 @import '../../sass/main.scss';
 
-.about {
+.about{
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 40px);
@@ -10,8 +10,7 @@
   }
 }
 
-.about_main {
-  
+.about_main {  
   width: 86%;
   margin: 0 auto;
   flex-grow: 1;

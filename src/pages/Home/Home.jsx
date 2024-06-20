@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner/Banner";
-import Gallery from '../../components/Gallery/Gallery';
+import Gallery from '../../components/CardContainer/CardContainer';
 
 import HomeImage from '../../assets/banner_home.png'
 
